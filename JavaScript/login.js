@@ -12,7 +12,7 @@ function logar() {
     });
 
     if (usuario) {
-        // Login com sucesso, redirecione para teste.html
+        // Login com sucesso, redirecione para calendar.html
         alert("Sucesso!");
         window.location.href = "calendar.html";
     } else {
