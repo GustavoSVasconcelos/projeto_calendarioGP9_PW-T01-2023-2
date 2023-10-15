@@ -13,18 +13,17 @@ body {
   padding: 0 10px;
   justify-content: center;
   min-height: 100vh;
-  background: #F2F2F2;
+  background-color: #fff;
 }
 
 .custom-header {
   width: 100%;
-  background-color: #F2F2F2; /* Set your preferred background color */
-  padding: 15px;
+  padding: 15px 0px 10px;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #000;
+  border-bottom: 0.5px solid #000;
 }
 .user-info {
   display: flex;
@@ -41,7 +40,8 @@ body {
 }
 .welcome-message {
   font-size: 20px;
-  margin: auto;
+  margin: auto; /* This centers the element horizontally */
+  text-align: center;
 }
 
 .fullCalendar{
@@ -142,3 +142,15 @@ header .current-date{
   justify-content: center;
   margin-top: 20px; /* Ajuste conforme necessário */
 }
+
+.fc {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.20);
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.fc-header-toolbar {
+  padding: 15px 5px 5px;
+}
+
+
