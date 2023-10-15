@@ -19,3 +19,8 @@ function logar() {
         alert("Login falhou. Verifique seu email e senha.");
     }
 }
+
+function redirecionarParaCadastro(){
+    window.location.href = "cadastro.html";
+
+}
