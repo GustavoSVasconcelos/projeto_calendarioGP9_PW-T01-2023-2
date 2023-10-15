@@ -14,7 +14,7 @@ function logar() {
     if (usuario) {
         // Login com sucesso, redirecione para teste.html
         alert("Sucesso!");
-        window.location.href = "#";
+        window.location.href = "calendar.html";
     } else {
         alert("Login falhou. Verifique seu email e senha.");
     }
