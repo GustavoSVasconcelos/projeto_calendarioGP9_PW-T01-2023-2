@@ -77,3 +77,23 @@ document.addEventListener('DOMContentLoaded', function () {
         locale: 'pt-br'
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the modal element
+    var modal = document.getElementById("myModal");
+
+    // Get the user info element
+    var userInfo = document.getElementById("user-info");
+
+    // When user clicks on user info, show the modal
+    userInfo.addEventListener("click", function () {
+        modal.style.display = "block";
+    });
+
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.addEventListener("click", function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+});

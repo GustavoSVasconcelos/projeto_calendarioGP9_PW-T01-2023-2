@@ -28,12 +28,14 @@ body {
 .user-info {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .user-info img {
   width: 40px; /* Adjust the size of the user picture */
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
+  cursor: pointer;
 }
 .user-name {
   font-size: 16px;
@@ -48,6 +50,7 @@ body {
   width: 80%;
   height: 90%;
 }
+
 .wrapper{
   width: 230px;
   height: 300px;
@@ -153,4 +156,23 @@ header .current-date{
   padding: 15px 5px 5px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
+.modal-content {
+  background-color: #f2f2f2;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #000;
+  width: 80%;
+}
