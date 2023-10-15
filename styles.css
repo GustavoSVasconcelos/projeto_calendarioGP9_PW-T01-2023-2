@@ -10,7 +10,7 @@
     width: 40px;
     height: 40px;
     background-color: transparent;
-    border: 2px solid red;
+    border: 2px solid #C60000;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@ body {
 }
 
 .custom-button {
-    background-color: #FF0000;
+    background-color: #C60000;
     color: #FFFFFF;
     padding: 10px 20px;
     border: none;
@@ -50,5 +50,5 @@ body {
 }
 
 .custom-button:hover {
-    background-color: #CC0000;
+    background-color: #C60000;
 }
