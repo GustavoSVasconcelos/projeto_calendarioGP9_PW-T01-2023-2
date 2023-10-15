@@ -1,7 +1,7 @@
 body {
-    background-image: url('imgcalendario1200100.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url('/Images/imgcalendario1200100.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     display: flex;
@@ -13,7 +13,7 @@ body {
 
 .container {
     width: 411px;
-    height: auto; /* Altura automática para acomodar o conteúdo */
+    height: auto;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -26,11 +26,12 @@ body {
 }
 
 .frase {
-    font-family: 'Calibri', sans-serif;
-    font-weight: 300;
-    font-size: 45px;
-    text-align: center;
-    margin: 0;
+    font-family: 'Calibri', sans-serif; 
+    font-weight: 300; 
+    font-size: 45px; 
+    text-align: center; 
+    margin: 0; 
+    margin-top: 5px;
 }
 
 .input-group {
@@ -38,6 +39,7 @@ body {
     position: relative;
 }
 
+input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 370px;
@@ -48,8 +50,8 @@ input[type="password"] {
 }
 
 button {
-    width: 370px;
-    height: 40px;
+    width: 370px; 
+    height: 40px; 
     background-color: #C60000;
     color: #fff;
     border: 1px solid #000;
@@ -58,27 +60,50 @@ button {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-top: 20px;
+    margin-top: 40px;
+}
+
+button.criar-conta {
+    width: 30%; 
+    background-color: #fff;
+    color: #C60000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px; 
+    font-size: 14px; 
+    cursor: pointer;
+    margin-top: 50px;
 }
 
 button:hover {
     background-color: #9C0000;
 }
 
+
 .input-group label {
     display: block;
     font-weight: bold;
     color: #000;
-    margin-bottom: 3px; 
+    margin-bottom: -8px;
     padding: 4%;
-    text-align: left;
+    text-align: left; 
     margin-bottom: -8px;
 }
 
-.recuperar-senha {
+.possui-cadastro{
     color: #C60000;
     text-decoration: underline;
     display: block;
     margin-top: 10px;
 }
 
+.error-validation{
+    color: red;
+    position: absolute;
+    top: 57px;
+    font-size: .8rem;
+}
+
+.template{
+    display: none;
+}
