@@ -2,12 +2,10 @@ const daysTag = document.querySelector(".days"),
 currentDate = document.querySelector(".current-date"),
 prevNextIcon = document.querySelectorAll(".icons span");
 
-// getting new date, current year and month
 let date = new Date(),
 currYear = date.getFullYear(),
 currMonth = date.getMonth();
 
-// storing full name of all months in array
 const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
               "Agosto", "Setembro", "Outrubro", "Novembro", "Dezembro"];
 
@@ -18,20 +16,21 @@ const renderCalendar = () => {
     lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
     let liTag = "";
 
-    for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
+    for (let i = firstDayofMonth; i > 0; i--) { // li of previous month last days
         liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
     }
 
-    for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
+    for (let i = 1; i <= lastDateofMonth; i++) { // li of all days of current month
         // adding active class to li if the current day, month, and year matched
         let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
                      && currYear === new Date().getFullYear() ? "active" : "";
         liTag += `<li class="${isToday}">${i}</li>`;
     }
 
-    for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
+    for (let i = lastDayofMonth; i < 6; i++) { // li of next month first days
         liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
     }
+    
     currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
     daysTag.innerHTML = liTag;
 }
@@ -51,5 +50,27 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
             date = new Date(); // pass the current date as date value
         }
         renderCalendar(); // calling renderCalendar function
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        $('#fullCalendarContainer').fullCalendar({
+          header: {
+            left: 'prev,next today', // Add the custom button
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+          },
+          defaultView: 'month',
+          editable: true,
+          eventLimit: true,
+          events: [
+            // Add your events here (if needed)
+            {
+              title: 'Event 1',
+              start: '2023-10-15T10:00:00',
+              end: '2023-10-15T12:00:00',
+            },
+            // Add more events as needed
+          ],
+        });
     });
 });
